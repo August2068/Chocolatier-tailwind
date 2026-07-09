@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <style>
+        root:{
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 100;
+            font-style: normal;
+        }
+    </style>
+    <title>Chocolatier Bakery</title>
+</head>
+<body class="bg-[#FFFBF6] font-[Inter]">
+
+    <header>
+       <div class="my-3 mx-8 flex items-center justify-between border border-[#D6C7B8] rounded-xl p-3 bg-[#FFF8ED]">
+            <div class="flex gap-3">
+                <img src="assets/Brand_Logo.svg" class="hidden md:flex">
+                <img src="assets/Brand.svg" class="md:hidden flex">
+                <p class="content-center text-[#211A23] font-bold">Chocolatier Bakery</p>
+            </div>
+
+            <div>
+                <nav class="hidden md:flex gap-15 pr-15 text-[#6A6370]">
+                    <a href="">Menu</a>
+                    <a href="">Our Story</a>
+                    <a href="">Order</a>
+                    <a href="">Contact</a>
+                </nav>
+            </div>
+                        
+            <!--
+            <div class="md:hidden flex">
+                <button class=""><img src="assets/burger.svg"></button>
+            </div>
+            -->
+            <el-dropdown class="md:hidden flex"></el-dropdown>
+                <div class="md:hidden flex">
+                    <button class="" popovertarget="popnav"><img src="assets/burger.svg"></button>
+                </div>
+                <el-menu anchor="bottom end" popover id="popnav" class="transition transition-discrete data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
+                    <div class="mx-9 my-4 py-1 text-[#211A23] font-bold bg-[#FFFBF6] fixed right-0 shadow-md border border-[#D0BBA6] rounded-lg">
+                        <a href="#" class="block px-4 py-2 text-sm">Menu</a>
+                        <a href="#" class="block px-4 py-2 text-sm">Our Story</a>
+                        <a href="#" class="block px-4 py-2 text-sm">Order</a>
+                        <a href="#" class="block px-4 py-2 text-sm">Contact</a>
+                    </div>
+                </el-menu>
+            </el-dropdown>
+        </div>
+    </header>
+
+    <section class="my-3 mx-8 md:border md:border-[#D0BBA6] md:rounded-xl p-3 md:bg-[#FFF4E4] grid md:grid-cols-2">
+        <div class="md:m-8 m-2">
+            <p class="text-xs m text-[#9B3F59] font-bold mb-3">SMALL-BATCH PASTRIES <span class="hidden md:inline">AND CHOCOLATE</span></p>
+            <h1 class="text-6xl text-[#211A23] font-bold mb-2">Elegant bakery boxes<span class="hidden md:inline">, made to order</span>.</h1>
+            <p class="text-[#6A6370]"><span class="hidden md:inline">Choose from polished cakes, chocolate tarts, croissants and seasonal pastry trays prepared for pickup</span><span class="md:hidden inline">Browse, add to cart and place a pickup request</span></p>
+            <button class="border rounded-full bg-[#2A1721] px-7 py-3 text-[#FFF9F0] font-bold text-xs mt-3">Order now</button>
+        </div>
+            
+        <div class="self-center md:m-3 lg:m-10"> 
+            <img src="https://picsum.photos/610/390" class="border border-[#D6C7B8] rounded-xl md:shadow-xl">
+        </div>
+    </section>
+
+    <section class="my-3 mx-8 p-4">
+        <div>
+            <p class="text-xs m text-[#9B3F59] font-bold mb-2 hidden md:flex">MOST ORDERED</p>
+            <h2 class="text-4xl text-[#211A23] font-bold md:mb-1"><span class="hidden md:flex">The three guests ask for first</span><span class="md:hidden">Most Ordered</span></h2>
+        </div>
+
+        <div class="flex flex-wrap lg:flex-nowrap gap-15 p-5 mx-10 place-content-center">
+            <div class="border-transparent rounded-xl bg-[#FFFFFF] shadow-xl">
+                <svg class="bg-linear-to-br from-[#EEF2EE] to-[#9B3F59] border-transparent rounded-t-xl w-[70vw] md:w-[20vw] 2xl:w-[15vw]">
+                </svg>
+                <div class="w-[70vw] md:w-[20vw] 2xl:w-[15vw]">
+                    <h3 class="text-[#211A23] font-bold m-3">Midnight Ganache Tart</h3>
+                    <p class="text-[#6A6370] mx-3">Silky dark chocolate custard, cocoa sable crust and smoked sea salt.</p>
+                    <p class="text-[#2A1721] font-bold mt-15 mx-3 mb-4">$12</p>
+                </div>
+            </div>
+
+            <div class="border-transparent rounded-xl shadow-xl">
+                <svg class="bg-linear-to-br from-[#EEF2EE] to-[#B9935A] border-transparent rounded-t-xl w-[70vw] md:w-[20vw] 2xl:w-[15vw]">
+                </svg>
+                <div class="w-[70vw] md:w-[20vw] 2xl:w-[15vw]">
+                    <h3 class="text-[#211A23] font-bold m-3">Vanilla Cloud Croissant</h3>
+                    <p class="text-[#6A6370] mx-3">Laminated butter pastry filled with vanilla cream and pearl sugar.</p>
+                    <p class="text-[#2A1721] font-bold mt-15 mx-3 mb-4">$12</p>
+                </div>
+            </div>
+
+            <div class="border-transparent rounded-xl shadow-xl hidden md:block">
+                <svg class="bg-linear-to-br from-[#EEF2EE] to-[#6F8172] border-transparent rounded-t-xl w-[70vw] md:w-[20vw] 2xl:w-[15vw]">
+                </svg>
+                <div class="w-[70vw] md:w-[20vw] 2xl:w-[15vw]">
+                    <h3 class="text-[#211A23] font-bold m-3">Atelier Celebration Box</h3>
+                    <p class="text-[#6A6370] mx-3">Four polished mini cakes with rotating chocolate and fruit finishes.</p>
+                    <p class="text-[#2A1721] font-bold mt-15 mx-3 mb-4">$12</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mx-3 p-4 my-8 hidden md:block">
+        <div class="mb-10">
+            <p class="text-xs m text-[#9B3F59] font-bold mb-2 hidden md:flex">FULL MENU</p>
+            <h2 class="text-4xl text-[#211A23] font-bold md:mb-1">Ten ways to make the table feel special</h2>
+        </div>
+
+        <div class="grid grid-cols-5 grid-row-2 justify-items-center">
+            <div class="border-transparent rounded-xl bg-[#FFFFFF] shadow-xl w-[15vw] 2xl:w-[12vw] mb-7">
+                <svg class="bg-linear-to-br from-[#EEF2EE] to-[#9B3F59] border-transparent rounded-t-xl w-[15vw] 2xl:w-[12vw]">
+                </svg>
+                <div class="w-[15vw] 2xl:w-[12vw]">
+                    <h3 class="text-[#211A23] font-bold m-3">Midnight Ganache Tart</h3>
+                    <p class="text-[#6A6370] mx-3">Menu card with image, description, quantity, and add-to-cart control.</p>
+                    <p class="text-[#2A1721] font-bold mt-7 mx-3 mb-4">$12</p>
+                </div>
+            </div>
+
+            
+            <div class="border-transparent rounded-xl bg-[#FFFFFF] shadow-xl w-[15vw] 2xl:w-[12vw] mb-7">
+                <svg class="bg-linear-to-br from-[#EEF2EE] to-[#B9935A] border-transparent rounded-t-xl w-[15vw] 2xl:w-[12vw]">
+                </svg>
+                <div class="w-[15vw] 2xl:w-[12vw]">
+                    <h3 class="text-[#211A23] font-bold m-3">Vanilla Cloud Croissant</h3>
+                    <p class="text-[#6A6370] mx-3">Menu card with image, description, quantity, and add-to-cart control.</p>
+                    <p class="text-[#2A1721] font-bold mt-7 mx-3 mb-4">$12</p>
+                </div>
+            </div>
+
+            <div class="border-transparent rounded-xl bg-[#FFFFFF] shadow-xl w-[15vw] 2xl:w-[12vw] mb-7">
+                <svg class="bg-linear-to-br from-[#EEF2EE] to-[#6F8172] border-transparent rounded-t-xl w-[15vw] 2xl:w-[12vw]">
+                </svg>
+                <div class="w-[15vw] 2xl:w-[12vw]">
+                    <h3 class="text-[#211A23] font-bold m-3">Atelier Celebration Box</h3>
+                    <p class="text-[#6A6370] mx-3">Menu card with image, description, quantity, and add-to-cart control.</p>
+                    <p class="text-[#2A1721] font-bold mt-7 mx-3 mb-4">$12</p>
+                </div>
+            </div>
+
+
+
+            <div class="border-transparent rounded-xl bg-[#FFFFFF] shadow-xl w-[15vw] 2xl:w-[12vw] mb-7">
+                <svg class="bg-linear-to-br from-[#EEF2EE] to-[#5F3146] border-transparent rounded-t-xl w-[15vw] 2xl:w-[12vw]">
+                </svg>
+                <div class="w-[15vw] 2xl:w-[12vw]">
+                    <h3 class="text-[#211A23] font-bold m-3">Raspberry Rose Eclair</h3>
+                    <p class="text-[#6A6370] mx-3">Menu card with image, description, quantity, and add-to-cart control.</p>
+                    <p class="text-[#2A1721] font-bold mt-7 mx-3 mb-4">$9</p>
+                </div>
+            </div>
+
+
+
+            <div class="border-transparent rounded-xl bg-[#FFFFFF] shadow-xl w-[15vw] 2xl:w-[12vw] mb-7">
+                <svg class="bg-linear-to-br from-[#EEF2EE] to-[#BDBDBD] border-transparent rounded-t-xl w-[15vw] 2xl:w-[12vw]">
+                </svg>
+                <div class="w-[15vw] 2xl:w-[12vw]">
+                    <h3 class="text-[#211A23] font-bold m-3">Pistachio Opera Slice</h3>
+                    <p class="text-[#6A6370] mx-3">Menu card with image, description, quantity, and add-to-cart control.</p>
+                    <p class="text-[#2A1721] font-bold mt-7 mx-3 mb-4">$11</p>
+                </div>
+            </div>
+
+
+            <div class="border-transparent rounded-xl bg-[#FFFFFF] shadow-xl w-[15vw] 2xl:w-[12vw] mb-7">
+                <svg class="bg-linear-to-br from-[#EEF2EE] to-[#9B3F59] border-transparent rounded-t-xl w-[15vw] 2xl:w-[12vw]">
+                </svg>
+                <div class="w-[15vw] 2xl:w-[12vw]">
+                    <h3 class="text-[#211A23] font-bold m-3">Hazelnut Praline Crown</h3>
+                    <p class="text-[#6A6370] mx-3">Menu card with image, description, quantity, and add-to-cart control.</p>
+                    <p class="text-[#2A1721] font-bold mt-7 mx-3 mb-4">$13</p>
+                </div>
+            </div>
+
+
+
+            <div class="border-transparent rounded-xl bg-[#FFFFFF] shadow-xl w-[15vw] 2xl:w-[12vw] mb-7">
+                <svg class="bg-linear-to-br from-[#EEF2EE] to-[#B9935A] border-transparent rounded-t-xl w-[15vw] 2xl:w-[12vw]">
+                </svg>
+                <div class="w-[15vw] 2xl:w-[12vw]">
+                    <h3 class="text-[#211A23] font-bold m-3">Lemon Silk Tartlet</h3>
+                    <p class="text-[#6A6370] mx-3">Menu card with image, description, quantity, and add-to-cart control.</p>
+                    <p class="text-[#2A1721] font-bold mt-7 mx-3 mb-4">$10</p>
+                </div>
+            </div>
+
+
+            <div class="border-transparent rounded-xl bg-[#FFFFFF] shadow-xl w-[15vw] 2xl:w-[12vw] mb-7">
+                <svg class="bg-linear-to-br from-[#EEF2EE] to-[#6F8172] border-transparent rounded-t-xl w-[15vw] 2xl:w-[12vw]">
+                </svg>
+                <div class="w-[15vw] 2xl:w-[12vw]">
+                    <h3 class="text-[#211A23] font-bold m-3">Salted Caramel Brioche</h3>
+                    <p class="text-[#6A6370] mx-3">Menu card with image, description, quantity, and add-to-cart control.</p>
+                    <p class="text-[#2A1721] font-bold mt-7 mx-3 mb-4">$7</p>
+                </div>
+            </div>
+
+
+
+            <div class="border-transparent rounded-xl bg-[#FFFFFF] shadow-xl w-[15vw] 2xl:w-[12vw] mb-7">
+                <svg class="bg-linear-to-br from-[#EEF2EE] to-[#5F3146] border-transparent rounded-t-xl w-[15vw] 2xl:w-[12vw]">
+                </svg>
+                <div class="w-[15vw] 2xl:w-[12vw]">
+                    <h3 class="text-[#211A23] font-bold m-3">Black Cocoa Truffle Set</h3>
+                    <p class="text-[#6A6370] mx-3">Menu card with image, description, quantity, and add-to-cart control.</p>
+                    <p class="text-[#2A1721] font-bold mt-7 mx-3 mb-4">$18</p>
+                </div>
+            </div>
+
+
+
+            <div class="border-transparent rounded-xl bg-[#FFFFFF] shadow-xl w-[15vw] 2xl:w-[12vw] mb-7">
+                <svg class="bg-linear-to-br from-[#EEF2EE] to-[#BDBDBD] border-transparent rounded-t-xl w-[15vw] 2xl:w-[12vw]">
+                </svg>
+                <div class="w-[15vw] 2xl:w-[12vw]">
+                    <h3 class="text-[#211A23] font-bold m-3">Seasonal Fruit Mille-Feuille</h3>
+                    <p class="text-[#6A6370] mx-3">Menu card with image, description, quantity, and add-to-cart control.</p>
+                    <p class="text-[#2A1721] font-bold mt-7 mx-3 mb-4">$14</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="border border-[#D6C7B8] rounded-2xl md:rounded-xl mx-8 mt-3 mb-15 p-3 shadow-xl bg-[#2A1721] md:bg-[#FFFFFF]">
+        <div class="hidden md:flex flex-row items-center">
+            <div class="flex-6">
+                <p class="text-xs text-[#9B3F59] font-bold m-3">CART</p>
+                <h3 class="text-[#211A23] font-bold m-3">Your bakery cart</h3>
+                <p class="text-[#6A6370] m-3">2 x Midnight Ganache Tart    1 x Vanilla Cloud Croissant    3 items selected</p>
+            </div>
+
+            <div class="flex-1">
+                <button class="border rounded-full shadow-md bg-[#2A1721] px-7 py-3 text-[#FFF9F0] font-bold text-xs mt-3">Checkout</button>
+            </div>
+        </div>
+
+        <div class="m-2">
+            <button class="text-[#FFF9F0] font-bold text-s">Added to your cart! See cart here</button>
+        </div>
+    </section>
+
+</body>
+</html>
